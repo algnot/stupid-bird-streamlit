@@ -25,6 +25,8 @@ def get_data_frame(collection, database="stupid-bird", query=None):
 users_df = get_data_frame("users")
 users_df = users_df[["pictureUrl", "userId", "displayName", "coin", "daimond", "lastLogin", "loginStack"]]
 
+st.page_link("https://stupid-bird.vercel.app/")
+
 st.header("All game logs")
 all_game_logs = get_data_frame("game-log", query={})
 if len(all_game_logs) > 0:
